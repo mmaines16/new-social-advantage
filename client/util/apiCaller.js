@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import Config from '../../server/config';
+import apiAuth from '../../config/api.auth.js';
 
 export const API_URL = (typeof window === 'undefined' || process.env.NODE_ENV === 'test') ?
   process.env.BASE_URL || (`http://localhost:${process.env.PORT || Config.port}/api`) :
@@ -7,7 +8,7 @@ export const API_URL = (typeof window === 'undefined' || process.env.NODE_ENV ==
 
 export default function callApi(endpoint, method = 'get', body) {
   return fetch(`${API_URL}/${endpoint}`, {
-    headers: { 'content-type': 'application/json' },
+    headers: { 'content-type': 'application/json', 'api-secret': apiAuth.apiSecret },
     method,
     body: JSON.stringify(body),
   })
