@@ -32,9 +32,14 @@ import Helmet from 'react-helmet';
 // Import required modules
 import routes from '../client/routes';
 import { fetchComponentData } from './util/fetchData';
-import posts from './routes/post.routes';
-import dummyData from './dummyData';
+import members from './routes/member.routes';
+import pages from './routes/page.routes';
+import products from './routes/product.routes';
+import dummyPages from './dummyData/dummyPages';
+import dummyProducts from './dummyData/dummyProducts';
+import dummyMembers from './dummyData/dummyMembers';
 import serverConfig from './config';
+import AuthenticateApi from './middleware/api.auth.middleware';
 
 // Set native promises as mongoose promise
 mongoose.Promise = global.Promise;
@@ -47,7 +52,9 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
   }
 
   // feed some dummy data in DB.
-  dummyData();
+  dummyPages();
+  dummyProducts();
+  dummyMembers();
 });
 
 // Apply body Parser and server public assets and routes
@@ -55,7 +62,10 @@ app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
-app.use('/api', posts);
+app.use('/api', AuthenticateApi);
+app.use('/api', members);
+app.use('/api', pages);
+app.use('/api', products);
 
 // Render Initial HTML
 const renderFullPage = (html, initialState) => {
