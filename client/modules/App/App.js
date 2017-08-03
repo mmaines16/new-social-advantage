@@ -7,7 +7,7 @@ import styles from './App.css';
 // Import Components
 import Helmet from 'react-helmet';
 import DevTools from './components/DevTools';
-import Header from './components/Header/Header';
+import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 
 // Import Actions
@@ -43,7 +43,7 @@ export class App extends Component {
               },
             ]}
           />
-          <Header
+          <Nav
             switchLanguage={lang => this.props.dispatch(switchLanguage(lang))}
             intl={this.props.intl}
           />

@@ -1,0 +1,22 @@
+
+
+.sm-links {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    height: 100%;
+    align-items: center;
+}
+
+.sm-links a {
+    height: 100%;
+    margin: 0px 10px;
+}
+
+.icon {
+    height: 65%;
+}
+
+.icon:hover {
+    opacity: .7;
+}

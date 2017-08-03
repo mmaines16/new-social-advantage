@@ -5,6 +5,7 @@ export default {
     addPost: 'Add Post',
     switchLanguage: 'Switch Language',
     twitterMessage: 'We are on Twitter',
+    facbookMessage: 'We are on Facebook',
     by: 'By',
     deletePost: 'Delete Post',
     createNewPost: 'Create new post',
