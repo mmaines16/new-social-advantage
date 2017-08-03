@@ -1,0 +1,77 @@
+.optin-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 80vh;
+
+    text-align: center;
+    padding: 10px;
+}
+
+.page-headers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.preheader {
+    margin-top: 30px;
+    color: #999;
+
+}
+
+.header {
+    margin-top: 30px;
+    color: rgba(255, 0, 0, .8);
+}
+
+.postheader {
+    margin-top: 30px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.demoButton {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgba(0, 200, 0, .7);
+    color: white;
+    min-width: 150px;
+    min-height: 80px;
+
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 24px;
+
+    box-shadow: 5px 5px 5px #bbb;
+    text-align: center;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.demoButton:active {
+    box-shadow: none;
+}
+
+@media (max-width: 767px){
+    .page-headers h1{
+        font-size: 20px;
+    }
+
+    .page-headers h3{
+        font-size: 16px;
+    }
+
+    .optin-page {
+        min-height: 60vh;
+    }
+}

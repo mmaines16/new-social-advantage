@@ -1,10 +1,11 @@
 export default {
   locale: 'en',
   messages: {
-    siteTitle: 'MERN Starter Blog',
+    siteTitle: 'New Social Advantage',
     addPost: 'Add Post',
     switchLanguage: 'Switch Language',
     twitterMessage: 'We are on Twitter',
+    facbookMessage: 'We are on Facebook',
     by: 'By',
     deletePost: 'Delete Post',
     createNewPost: 'Create new post',

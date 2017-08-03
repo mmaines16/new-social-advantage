@@ -1,20 +1,12 @@
 import React, { PropTypes } from 'react';
 
 // Import Components
-import PostListItem from './PostListItem/PostListItem';
-
-function PostList(props) {
+// import PostListItem from './PostListItem/PostListItem';
+// function PostList(props)
+function PostList() {
   return (
     <div className="listView">
-      {
-        props.posts.map(post => (
-          <PostListItem
-            post={post}
-            key={post.cuid}
-            onDelete={() => props.handleDeletePost(post.cuid)}
-          />
-        ))
-      }
+      <h1>Placeholder</h1>
     </div>
   );
 }

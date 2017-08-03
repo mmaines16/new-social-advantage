@@ -17,7 +17,7 @@ const app = new Express();
 // Run Webpack dev server in development mode
 if (process.env.NODE_ENV === 'development') {
   const compiler = webpack(config);
-  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
+  app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath, historyApiFallback: true }));
   app.use(webpackHotMiddleware(compiler));
 }
 
@@ -62,6 +62,7 @@ app.use(compression());
 app.use(bodyParser.json({ limit: '20mb' }));
 app.use(bodyParser.urlencoded({ limit: '20mb', extended: false }));
 app.use(Express.static(path.resolve(__dirname, '../dist/client')));
+app.use('/resources', Express.static(path.resolve(__dirname, '../resources')));
 app.use('/api', AuthenticateApi);
 app.use('/api', members);
 app.use('/api', pages);
@@ -84,6 +85,8 @@ const renderFullPage = (html, initialState) => {
         ${head.meta.toString()}
         ${head.link.toString()}
         ${head.script.toString()}
+
+        <meta name="google-site-verification" content="2dZoH3Rzu_N7x-2sZ9ar8ykiy_4VOgRK8vJBfboLXXE" />
 
         ${process.env.NODE_ENV === 'production' ? `<link rel='stylesheet' href='${assetsManifest['/app.css']}' />` : ''}
         <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'/>

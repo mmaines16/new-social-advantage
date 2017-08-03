@@ -7,7 +7,7 @@ export default function () {
     }
 
     const optinContent = {
-      preheader: 'get your 100% demo bait',
+      preheader: 'get your 100% free demo bait',
       header: 'The Best Bait to Convert Leads, Improve Your Lead Opt In Rate by 80%',
       postheader: 'This Bait Really Works! I Use It For All My Opt Ins!',
       benifits: [],

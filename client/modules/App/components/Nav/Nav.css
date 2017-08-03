@@ -1,0 +1,166 @@
+.nav {
+  background: white center;
+  background-size: cover;
+
+  height: 30vh;
+
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+}
+
+.content {
+  width: 100vw;
+  max-height: 200px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-weight: 300;
+  font-size: 42px;
+}
+
+.site-title img {
+  height: 20vh;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.pre-nav {
+  background: rgba(243, 129, 72, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  height: 8vh;
+}
+
+.site-links {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around; 
+  min-width: 30vw; 
+  align-items: center;
+
+  float: right; 
+  margin: 0px 20px;
+}
+
+.site-links a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-links a:hover {
+  color: #999;
+}
+
+.pre-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  min-width: 20vw;
+  align-items: center;
+  margin: 0px 10px;
+  
+}
+
+.pre-nav li {
+  display: inline-block;
+  margin: 0px;
+  padding: 5px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.selected {
+  border-bottom: 1px solid #fff;
+}
+
+.mobile-links {
+  display: none;
+}
+
+.mobile-link-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mobile-link-container a {
+  text-decoration: none;
+  color: white;
+  border-top: solid 1px white;
+}
+
+.mobile-link-container a:hover {
+  color: #999;
+}
+
+@media (max-width: 767px){
+  .site-title img {
+    height: 10vh;
+    align-self: center;
+  }
+
+  .content {
+    align-self: center;
+    margin-top: auto;
+    flex-direction: column;
+  }
+
+  .nav {
+    min-height: 35vh;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .site-links {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .site-title {
+    display: flex;
+    justify-content: center;
+  }
+
+  .site-title img {
+    align-self: center;
+  }
+
+  .site-links h3 {
+    margin-top: 5px;
+
+  }
+
+  .mobile-links {
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    padding: 5px;
+    margin: none;
+    border-radius: 5px;
+    color: white;
+
+    background: #eee url(../../header-bk.png);
+    background-size: cover;
+  }
+
+
+
+  .desktop-link {
+    display: none;
+  }
+
+
+}

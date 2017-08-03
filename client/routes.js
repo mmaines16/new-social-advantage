@@ -32,10 +32,10 @@ export default (
       }}
     />
     <Route
-      path="/posts/:slug-:cuid"
+      path="/pages/:slug"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./modules/Post/pages/PostDetailPage/PostDetailPage').default);
+          cb(null, require('./modules/Page/pages/PageRouter/PageRouter').default);
         });
       }}
     />
