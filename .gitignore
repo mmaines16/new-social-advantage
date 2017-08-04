@@ -8,4 +8,4 @@ public/*
 dist
 coverage/
 .nyc_output/
-config/env/*
+config/env/api.auth.js
