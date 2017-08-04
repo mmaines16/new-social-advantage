@@ -44,8 +44,8 @@ module.exports = {
 }
 ```
 
-### Please Note that this API works best as a encrypty key such as a base64 encoded string ###
-### The API protection will be upgraded to a OATH2 based system at a later date ###
+__ Please Note that this API works best as a encrypty key such as a base64 encoded string __
+__ The API protection will be upgraded to a OAUTH2 based system at a later date __
 
 ## Test the API
 The api can be tested in development mode by attaching the api secret key from the step above as a query parameter 
