@@ -1,4 +1,7 @@
 # New Social Advantage Website Template
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mmaines16/new-social-advantage.svg)](https://greenkeeper.io/)
+
 Code for the New Social Advantage Website
 
 ## Pre-Requisites
